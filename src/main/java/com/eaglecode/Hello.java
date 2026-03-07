@@ -6,10 +6,16 @@ import org.springframework.stereotype.Component;
 @Component
 public class Hello {
 
-    // @Autowired field injection
-    Laptop laptop = new Laptop();
+    //@Autowired field injection
+   private Laptop laptop;
 
-    public void Hello(Laptop laptop){
+    /*public void Hello(Laptop laptop){
+        this.laptop = laptop;
+    }*/
+
+    // Setter Method/ Mutator
+    @Autowired
+    public void setLaptop(Laptop laptop){
         this.laptop = laptop;
     }
 
