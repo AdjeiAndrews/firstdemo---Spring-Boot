@@ -6,23 +6,23 @@ import org.springframework.stereotype.Component;
 @Component
 public class Hello {
 
-    //@Autowired field injection
-   private Laptop laptop;
+    @Autowired  //field injection
+   private Computer comp;
 
     /*public void Hello(Laptop laptop){
         this.laptop = laptop;
     }*/
 
     // Setter Method/ Mutator
-    @Autowired
+   /* @Autowired
     public void setLaptop(Laptop laptop){
         this.laptop = laptop;
-    }
+    }*/
 
 
     public void greet() {
 
-        laptop.compile();
+        comp.compile();
         System.out.println("I feel good!");
     }
 }
